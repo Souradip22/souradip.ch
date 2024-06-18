@@ -10,42 +10,29 @@ import { SquareArrowOutUpRight } from "lucide-react";
 import Timeline from "@/components/Timeline";
 import SocialLinks from "@/components/SocialLinks";
 import { SongData } from "@/lib/types";
+import { siteUrl } from "@/lib/consts";
+import projects from "@/data/projects.json";
 
 export const metadata: Metadata = {
-  title: "Souradip Ch",
-  description: "I’m a software engineer having around 6 years of experience",
+  title: "Souradip Chandra",
+  openGraph: {
+    type: "website",
+    images: [
+      {
+        url: new URL("/og-home-img.png", siteUrl).href,
+        width: 1920,
+        height: 1080,
+        alt: "Souradip",
+      },
+    ],
+  },
+
+  description:
+    "A software developer from India with 6 years of experience, deeply fascinated by large-scale distributed systems and backend technologies.",
 };
 
 const Home = async (): Promise<ReactElement> => {
   const song = await fetchCurrentlyPlaying();
-  //TO DO part
-  const allProjects: any[] = [
-    {
-      title: "Project One",
-      slug: "project-one",
-      web: "https://example.com/web/project-one",
-      icon: null,
-      active: true,
-      tagline: "This is the first project.",
-    },
-    {
-      title: "Project Two",
-      slug: "project-two",
-      web: "https://example.com/web/project-two",
-      icon: null,
-      active: false,
-      tagline: "This is the second project.",
-    },
-    {
-      title: "Project Three",
-      slug: "project-three",
-      web: "https://example.com/ios/project-three",
-      icon: null,
-      active: true,
-      tagline: "This is the third project.",
-    },
-  ];
-
   return (
     <PageLayout>
       <Header
@@ -57,9 +44,22 @@ const Home = async (): Promise<ReactElement> => {
       <main>
         <div>
           <p className="!m-0">
-            Hi, I’m Souradip Chandra. Versatile full-stack engineer proficient
-            in both front-end and back-end development, adept at crafting
-            seamless and intuitive user experiences. 🚀
+            Hi 👋, I&apos;m Souradip!
+            <ul className="text-md ">
+              <li>Software Engineer, based in India</li>
+              <li>
+                Working with{" "}
+                <LinkWrapper href="https://www.griddynamics.com/">
+                  Grid Dynamics
+                </LinkWrapper>{" "}
+                , previously at{" "}
+                <LinkWrapper href="https://www.3ds.com/">3ds</LinkWrapper>
+              </li>
+              <li>
+                Love to travel <span className="text-xs"> 🌍 </span> and explore
+                foods <span className="text-xs">🍲</span>{" "}
+              </li>
+            </ul>
           </p>
         </div>
         <hr className="my-4" />
@@ -68,13 +68,13 @@ const Home = async (): Promise<ReactElement> => {
             Side-projects
           </h2>
           <div className="my-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-            {allProjects?.map((project, index) => (
+            {projects?.slice(0, 3).map((project, index) => (
               <div
                 key={`sub-proj-${index}`}
                 className="min-w-[120px] flex-col px-4 py-2 border border-gray-200 dark:border-gray-700/70 rounded-lg hover:bg-gray-100 dark:bg-stone-800/70 dark:hover:bg-stone-800 dark:hover:border-gray-700 dark:shadow-[0_0_8px_rgba(0,0,0,0.8)] shadow-[0_0_8px_rgba(0,0,0,0.06)] flex relative !no-underline"
               >
                 <Link
-                  href={project?.web}
+                  href={project?.demoLink}
                   target="_blank"
                   title={project?.title}
                 >
@@ -83,12 +83,14 @@ const Home = async (): Promise<ReactElement> => {
                   </div>
                 </Link>
                 <div key={project?.title}>
-                  <div className="py-3 relative">
+                  <div className="py-3 relative  overflow-hidden not-prose">
                     {project?.icon ? (
                       <Image
-                        className="w-[40px] drop-shadow-xl"
+                        className="object-fill w-[40px] h-[40px]"
                         src={project?.icon}
                         alt={project?.title}
+                        width={20}
+                        height={40}
                       />
                     ) : (
                       <>
@@ -112,9 +114,9 @@ const Home = async (): Promise<ReactElement> => {
                         ""
                       )}
                     </div>
-                    {project?.tagline ? (
-                      <p className="text-sm opacity-80 !mt-0 ">
-                        {project?.tagline}
+                    {project?.description ? (
+                      <p className="text-sm opacity-80 !mt-0 line-clamp-3">
+                        {project?.description}
                       </p>
                     ) : (
                       ""
@@ -124,6 +126,18 @@ const Home = async (): Promise<ReactElement> => {
               </div>
             ))}
           </div>
+          <Link
+            href="/projects"
+            className="group border border-primary-500 bg-stone-900 text-primary-400 px-2 py-1 rounded-xl text-xs hover:text-primary-500 transition ease-in-out duration-200 not-prose"
+          >
+            View all
+            <span
+              aria-hidden="true"
+              className="ml-1 inline-block translate-x-0 group-hover:translate-x-1 transition-transform ease-in-out duration-200"
+            >
+              →
+            </span>
+          </Link>
         </div>
         <hr className="my-4" />
         <Timeline />

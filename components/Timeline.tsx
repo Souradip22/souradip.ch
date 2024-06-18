@@ -33,16 +33,18 @@ const Timeline: FC = () => {
       {!showAll ? (
         <button
           onClick={showMoreItems}
-          className="flex gap-1 items-center py-3 px-3 rounded  text-primary-600 text-sm"
+          className="group flex gap-1 items-center py-3 px-3 rounded  text-primary-600 text-sm"
         >
-          <ArrowDown className="w-5 h-5" /> Show more
+          <ArrowDown className="w-4 h-4 inline-block translate-y-0 group-hover:translate-y-1 transition-transform ease-in-out duration-200" />{" "}
+          Show more
         </button>
       ) : (
         <button
           onClick={showLessItems}
-          className="flex gap-1 items-center py-3 px-3 rounded  text-primary-600 text-sm"
+          className="group flex gap-1 items-center py-3 px-3 rounded  text-primary-600 text-sm"
         >
-          <ArrowUp className="w-5 h-5" /> Show less
+          <ArrowUp className="w-4 h-4 inline-block translate-y-0 group-hover:-translate-y-1 transition-transform ease-in-out duration-200" />{" "}
+          Show less
         </button>
       )}
     </>

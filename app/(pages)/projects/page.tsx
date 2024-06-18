@@ -39,7 +39,7 @@ const Project: FC = () => {
               <div className="relative rounded-md w-full h-64 ">
                 <BlurImage
                   src={item.imageUrl}
-                  className="rounded-md object-top object-cover !m-0"
+                  className="rounded-md object-top  !m-0"
                   fill={true}
                 />
               </div>

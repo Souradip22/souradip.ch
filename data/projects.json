@@ -1,18 +1,32 @@
 [
   {
-    "title": "Portfolio Minute",
-    "description": "Portfolio Minute is your ultimate tool for unleashing creativity and efficiency, enabling you to effortlessly construct a visually striking portfolio in just 60 seconds. Say goodbye to hours of tedious work and hello to a showcase that dazzles and impresses with ease.",
-    "imageUrl": "/gifs/portfolio-min-1.gif",
-    "tags": ["NextJs", "Vercel", "NextAuth"],
-    "demoLink": "https://portfoliominute.in",
-    "repoLink": null
-  },
-  {
     "title": "Tailwind Combinator",
-    "description": "Discover finely-crafted Tailwind CSS components to enhance your web designs. Simply copy and paste the code to begin using them in your projects.",
+    "description": "Simplify CSS styling with Tailwind CSS. Tailwind Combinator offers beautifully crafted snippets for various boxshadows, buttons and cards.",
     "imageUrl": "/gifs/tailwind-combinator.gif",
     "tags": ["TailwindCSS", "NextJS"],
     "demoLink": "https://tailwindcombinator.souradip.ch/",
-    "repoLink": "https://github.com/Souradip22/tailwind-combinator"
+    "repoLink": "https://github.com/Souradip22/tailwind-combinator",
+    "icon": "/project-logos/tailwind-combinator.svg",
+    "active": true
+  },
+  {
+    "title": "Portfolio Minute",
+    "description": "This multitenant web app enables users to create stunning portfolio websites with custom subdomains for personalized experiences. It's been used by 50+ users, completely free and editable.",
+    "imageUrl": "/gifs/portfolio-min-1.gif",
+    "tags": ["NextJs", "Vercel", "NextAuth"],
+    "demoLink": "https://portfoliominute.in",
+    "repoLink": null,
+    "icon": "/project-logos/portfolio-minute.svg",
+    "active": true
+  },
+  {
+    "title": "Java Low Level Design",
+    "description": "This repository contains various Java projects focused on low-level design (LLD) concepts. It includes implementations of different design patterns, as well as specific use cases",
+    "imageUrl": "/project-logos/java-lld.svg",
+    "tags": ["Java", "LLD", "Design Patterns"],
+    "demoLink": "https://github.com/Souradip22/java-lld",
+    "repoLink": "https://github.com/Souradip22/java-lld",
+    "icon": null,
+    "active": true
   }
 ]

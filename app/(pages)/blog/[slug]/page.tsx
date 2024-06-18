@@ -26,6 +26,35 @@ import MetaData from "@/components/MetaData";
 
 export const runtime = "nodejs";
 
+export const generateMetadata = async ({
+  params,
+}: PageProperties): Promise<Metadata> => {
+  const currentPath = params.slug;
+  const allBlogs = await getAllPostsMeta();
+  const post = allBlogs.find(({ slug }) => slug.current === currentPath);
+
+  if (!post) {
+    return {};
+  }
+
+  return {
+    title: post.title,
+    description: post.excerpt || "",
+    openGraph: post.mainImage
+      ? {
+          images: [
+            {
+              url: new URL(post.mainImage.asset.url, siteUrl).href,
+              width: 1920,
+              height: 1080,
+              alt: post.title,
+            },
+          ],
+        }
+      : undefined,
+  };
+};
+
 export const generateStaticParams = async (): Promise<
   PageProperties["params"][]
 > => {
