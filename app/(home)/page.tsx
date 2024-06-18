@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: new URL("/og-home-img.png", siteUrl).href,
+        url: new URL("/og-images/og-home.png", siteUrl).href,
         width: 1920,
         height: 1080,
         alt: "Souradip",

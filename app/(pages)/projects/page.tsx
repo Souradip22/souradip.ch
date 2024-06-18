@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Metadata } from "next";
 import { BlurImage } from "@/components/BlurImage";
 import { Header } from "@/components/Header";
+import { siteUrl } from "@/lib/consts";
 import { LinkWrapper } from "@/components/LinkWrapper";
 
 const title = "Side Projects";
@@ -13,6 +14,17 @@ const description =
 export const metadata: Metadata = {
   title,
   description,
+  openGraph: {
+    type: "website",
+    images: [
+      {
+        url: new URL("/og-images/og-projects.png", siteUrl).href,
+        width: 1920,
+        height: 1080,
+        alt: "Souradip",
+      },
+    ],
+  },
 };
 const Project: FC = () => {
   return (
