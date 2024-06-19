@@ -1,6 +1,8 @@
 import { clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 import type { ClassValue } from "clsx";
+import { Activity } from "./types";
+import { Props } from "@/components/ActivityGraph/GithubActivityGraph";
 
 export const cn = (...inputs: ClassValue[]): string => twMerge(clsx(inputs));
 

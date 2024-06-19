@@ -6,12 +6,17 @@ import type { StaticImageData } from "next/image";
 import type { Metadata } from "next";
 import type { FC, ReactElement } from "react";
 import Link from "next/link";
-import { SquareArrowOutUpRight } from "lucide-react";
+import { SquareArrowOutUpRight, ExternalLink, HeartIcon } from "lucide-react";
 import Timeline from "@/components/Timeline";
-import SocialLinks from "@/components/SocialLinks";
+import SocialLinks, { socialIconMap } from "@/components/SocialLinks";
+import socialLinks from "@/data/social.json";
+import IMAGES from "@/data/images.json";
 import { SongData } from "@/lib/types";
 import { siteUrl } from "@/lib/consts";
 import projects from "@/data/projects.json";
+import GithubActivityGraph from "@/components/ActivityGraph/GithubActivityGraph";
+import LeetcodeActivityGraph from "@/components/ActivityGraph/LeetcodeActivityGraph";
+import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Souradip Chandra",
@@ -31,8 +36,17 @@ export const metadata: Metadata = {
     "A software developer from India with 6 years of experience, deeply fascinated by large-scale distributed systems and backend technologies.",
 };
 
+const getUrlByTitle = (title: string) => {
+  const link = socialLinks.find(
+    (link) => link.title.toLowerCase() === title.toLowerCase()
+  );
+  return link ? link.url : null;
+};
+
 const Home = async (): Promise<ReactElement> => {
   const song = await fetchCurrentlyPlaying();
+  const leetcodeLink = getUrlByTitle("Leetcode");
+  const githubLink = getUrlByTitle("Github");
   return (
     <PageLayout>
       <Header
@@ -43,7 +57,7 @@ const Home = async (): Promise<ReactElement> => {
       <SocialLinks />
       <main>
         <div>
-          <p className="!m-0">
+          <div className="!m-0">
             Hi 👋, I&apos;m Souradip!
             <ul className="text-md ">
               <li>Software Engineer, based in India</li>
@@ -60,7 +74,7 @@ const Home = async (): Promise<ReactElement> => {
                 foods <span className="text-xs">🍲</span>{" "}
               </li>
             </ul>
-          </p>
+          </div>
         </div>
         <hr className="my-4" />
         <div>
@@ -147,6 +161,93 @@ const Home = async (): Promise<ReactElement> => {
         <h2 className="text-xl font-medium text-black dark:text-white !m-0">
           Recent Activity
         </h2>
+
+        <div className="my-8">
+          <div className="flex items-center gap-3 pb-3">
+            <h3 className="font-medium text-black dark:text-white !m-0">
+              Github Contributions
+            </h3>
+            <LinkWrapper
+              href={githubLink as string}
+              className="relative flex items-center gap-1 justify-center px-2 py-[3px] rounded-lg group text-xs text-gray-900 shadow-sm border border-gray-300 min-h-[28px] dark:border-gray-700 dark:text-gray-200  bg-white dark:bg-neutral-900 duration-100 hover:text-primary-400 "
+            >
+              View Github profile
+              <ExternalLink className="h-3 mb-[1px] w-3" />
+            </LinkWrapper>
+          </div>
+          <GithubActivityGraph username="souradip22" />
+        </div>
+        <div className="my-8">
+          <div className="flex items-center gap-3 pb-3">
+            <h3 className="font-medium text-black dark:text-white !m-0">
+              Leetcode Submissions
+            </h3>
+            <LinkWrapper
+              href={leetcodeLink as string}
+              className="relative flex items-center gap-1 justify-center px-2 py-[3px] rounded-lg group text-xs text-gray-900 shadow-sm border border-gray-300 min-h-[28px] dark:border-gray-700 dark:text-gray-200  bg-white dark:bg-neutral-900 duration-100 hover:text-primary-400 "
+            >
+              View Leetcode profile
+              <ExternalLink className="h-3 w-3 mb-[1px]" />
+            </LinkWrapper>
+          </div>
+          <LeetcodeActivityGraph username="souradip22" />
+        </div>
+        <div className="mt-5 mb-12 justify-center relative group">
+          <h4 className="text-sm mb-4">
+            I&apos;m not exactly a social media sensation elsewhere, but behold,
+            a glimpse into my world through these snapshots! 📸✨ 🤙🏻
+          </h4>
+          <div className="grid grid-cols-3 md:grid-cols-4 gap-5 md:gap-6">
+            {IMAGES.travel?.slice(0, 4)?.map((item) => (
+              <div
+                key={item.src}
+                className={cn(
+                  "relative bg-gray-100  hover:bg-stone-900 duration-100 ease-in-out rounded-[12px] dark:border-stone-700  md:hover:scale-[1.05]"
+                )}
+              >
+                <Image
+                  src={item?.src}
+                  alt={item?.place}
+                  className="rounded-[9px] object-cover w-full h-full"
+                  loading="lazy"
+                  // layout="fill"
+                  width={1200}
+                  height={1200}
+                />
+              </div>
+            ))}
+          </div>
+          <div className="my-4"></div>
+          <h4 className="text-sm  mb-4">
+            Some of my favorite dishes 🍲🍕🍰🍣 because food is the real MVP of
+            my life! 😄
+          </h4>
+          <div className="grid grid-cols-3 md:grid-cols-4 gap-5 md:gap-6">
+            {IMAGES.food?.slice(0, 4)?.map((item) => (
+              <div
+                key={item.src}
+                className={cn(
+                  "relative bg-gray-100  hover:bg-stone-900 duration-100 ease-in-out rounded-[12px] dark:border-stone-700  md:hover:scale-[1.05]"
+                )}
+              >
+                <Image
+                  src={item?.src}
+                  alt={item?.place}
+                  className="rounded-[9px] object-cover w-full h-full"
+                  loading="lazy"
+                  // layout="fill"
+                  width={1200}
+                  height={1200}
+                />
+                {item.favourite && (
+                  <span className="absolute top-1 right-3 animate-pulse w-4 h-4  ">
+                    ❤️
+                  </span>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
         <div className="not-prose">
           {song?.isPlaying ? <WhenPlaying song={song} /> : <NotPlaying />}
         </div>

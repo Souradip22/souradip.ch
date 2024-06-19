@@ -3,7 +3,7 @@ import socialLinks from "@/data/social.json";
 import React from "react";
 import { LinkWrapper } from "./LinkWrapper";
 
-const socialIconMap = {
+export const socialIconMap = {
   Linkedin: (
     <svg
       xmlns="http://www.w3.org/2000/svg"

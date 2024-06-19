@@ -1,0 +1,40 @@
+{
+  "travel": [
+    {
+      "src": "/images/travel/img-5.jpeg",
+      "place": "Ooty, India"
+    },
+    {
+      "src": "/images/travel/img-1.jpeg",
+      "place": "Goa, India"
+    },
+    {
+      "src": "/images/travel/img-6.jpeg",
+      "place": "Pondicherry, India"
+    },
+    {
+      "src": "/images/travel/img-3.jpeg",
+      "place": "Pondicherry, India"
+    }
+  ],
+  "food": [
+    {
+      "src": "/images/food/sandwich.jpeg",
+      "place": "Sandwich",
+      "favourite": true
+    },
+    {
+      "src": "/images/food/poori.jpeg",
+      "place": "Poori Ghughni",
+      "favourite": true
+    },
+    {
+      "src": "/images/food/mac-pizza.jpeg",
+      "place": "Mac & Cheese"
+    },
+    {
+      "src": "/images/food/fish-chips.jpeg",
+      "place": "Fish & Chips"
+    }
+  ]
+}
