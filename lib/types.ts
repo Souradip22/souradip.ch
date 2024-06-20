@@ -148,3 +148,24 @@ export type LeetcodeApiErrorResponse = {
     matchedUser: null;
   };
 };
+
+export interface Experience {
+  title?: string;
+  description?: string;
+  fromDate?: string;
+  toDate?: string;
+  location?: string;
+  designation?: string;
+  type?: string;
+}
+
+export interface TimelineData {
+  [year: string]: Experience[];
+}
+
+export interface ResumeData {
+  title: string;
+  description: string;
+  lastUpdate: string;
+  data: TimelineData;
+}

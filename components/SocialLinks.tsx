@@ -111,7 +111,7 @@ export const socialIconMap = {
 
 export default function SocialLinks() {
   return (
-    <div className="flex gap-3 items-center ml-auto !my-4 ">
+    <div className="flex gap-3 items-center ml-auto !my-2 ">
       {socialLinks.map((item, index) => {
         return SocialLink(item);
       })}

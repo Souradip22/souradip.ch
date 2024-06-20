@@ -1,0 +1,86 @@
+{
+  "title": "🎓 Education & 🛠️ Experience",
+  "description": "Drawing from a diverse educational background and hands-on experience in Software Engineering field, I bring a dynamic perspective to every project.",
+  "lastUpdate": "🗓️ July 30, 2024",
+  "data": {
+    "2023": [
+      {
+        "title": "Grid Dynamics",
+        "description": "I worked with the Google Wifi team from the Grid side on the Google Nest project. 🛜 ",
+        "fromDate": "2023",
+        "toDate": "Present",
+        "location": "Remote",
+        "designation": "💻 Software Engineer",
+        "type": "🏢 company"
+      },
+      {
+        "title": "Got Married",
+        "description": "A very special year in my life as I married the love of my life! 🌟",
+        "fromDate": "2021",
+        "toDate": "2023",
+        "designation": "🔬 Research And Development Specialist",
+        "type": "🏢 company"
+      }
+    ],
+    "2021": [
+      {
+        "title": "Dassault Systèmes",
+        "description": "Joined Dassault Systemes as a Research & Development Engineer. Working on their Flagship product - Project Management Application.",
+        "fromDate": "2021",
+        "toDate": "2023",
+        "location": " Bangalore",
+        "designation": "🔬 Research And Development Specialist",
+        "type": "🏢 company"
+      }
+    ],
+    "2018": [
+      {
+        "title": "Wipro",
+        "description": "As a Senior Software Developer at Wipro Ltd, I led UI development for 4+ AI-driven apps.",
+        "fromDate": "2018",
+        "toDate": "2021",
+        "location": " Bangalore",
+        "designation": "💼 Senior Software Developer",
+        "type": "🏢 company"
+      },
+      {
+        "title": "Engineering",
+        "description": "Graduated 🎓 Bachelor of Technology in Mechanical Engineering",
+        "fromDate": "2014",
+        "toDate": "2018",
+        "location": " West Bengal",
+        "designation": "🎓 Bachelor Of Technology",
+        "type": "🏫 school"
+      }
+    ],
+    "2014": [
+      {
+        "title": "Bankura Zilla School",
+        "description": "Pursued higher secondary education at Bankura Zilla School, focusing on mathematics and science subjects. 🏫",
+        "fromDate": "2014",
+        "toDate": "2012",
+        "location": "West Bengal",
+        "designation": "🏫 Higher Secondary School",
+        "type": "🏫 school"
+      }
+    ],
+    "2012": [
+      {
+        "title": "Bankura Zilla School",
+        "description": "Pursued secondary education at Bankura Zilla School, excelling in mathematics and science with a 90% score. 🏫",
+        "fromDate": "2012",
+        "toDate": "2010",
+        "location": "West Bengal",
+        "designation": " Secondary School",
+        "type": "🏫 school"
+      }
+    ],
+    "1997": [
+      {
+        "title": "Born",
+        "description": "Wish me on 22 November 🎂",
+        "location": "West Bengal"
+      }
+    ]
+  }
+}

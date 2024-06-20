@@ -8,6 +8,7 @@ import { siteUrl } from "@/lib/consts";
 import { cn } from "@/lib/utils";
 import type { Metadata, Viewport } from "next";
 import type { FC, ReactNode } from "react";
+import { GoogleAnalytics } from "nextjs-google-analytics";
 
 type RootLayoutProperties = {
   readonly children: ReactNode;
@@ -60,6 +61,9 @@ const RootLayout: FC<RootLayoutProperties> = ({ children }) => (
         "bg-white dark:bg-neutral-900 font-sans"
       )}
     >
+      {/* {process.env.NODE_ENV === "production" && (
+        <GoogleAnalytics strategy="lazyOnload" />
+      )} */}
       {children}
       <Navbar />
       <Toaster />

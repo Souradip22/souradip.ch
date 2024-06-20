@@ -9,7 +9,7 @@ import { LinkWrapper } from "@/components/LinkWrapper";
 
 const title = "Side Projects";
 const description =
-  "I've worked on a variety of projects, ranging from basic to complex. 💻";
+  "I've worked on a variety of projects, ranging from basic to complex. 🧑🏻‍💻";
 
 export const metadata: Metadata = {
   title,
