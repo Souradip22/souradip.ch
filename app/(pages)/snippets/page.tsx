@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { FC } from "react";
-
+export const revalidate = 60;
 const title = "Snippets";
 const description =
   "Reusable code snippets that can be easily integrated in your application 🧩.";
