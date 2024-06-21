@@ -6,12 +6,7 @@ import type { StaticImageData } from "next/image";
 import type { Metadata } from "next";
 import type { FC, ReactElement } from "react";
 import Link from "next/link";
-import {
-  SquareArrowOutUpRight,
-  ExternalLink,
-  HeartIcon,
-  Dot,
-} from "lucide-react";
+import { SquareArrowOutUpRight, ExternalLink, Bike, Dot } from "lucide-react";
 import Timeline from "@/components/Timeline";
 import SocialLinks, { socialIconMap } from "@/components/SocialLinks";
 import socialLinks from "@/data/social.json";
@@ -38,7 +33,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "A software developer from India with 6 years of experience, deeply fascinated by large-scale distributed systems and backend technologies.",
+    "I'm a  Software Engineer from India, now based in Bangalore. I bring 6 years' expertise to crafting seamless software solutions.",
 };
 
 const getUrlByTitle = (title: string) => {
@@ -78,10 +73,31 @@ const Home = async (): Promise<ReactElement> => {
       <main className="!my-2">
         <div>
           <div className="!m-0">
-            <p>Glad to have you in my little corner of the web! 🌟</p>
             <p>
-              Check out my portfolio to see my projects, and don&apos;t hesitate
-              to reach out if you want to chat or collaborate!
+              Hi, I&apos;m Souradip! Welcome to my digital playground{" "}
+              <span className="relative inline-block">
+                <Bike></Bike>
+                <span className="absolute bottom-0 inset-x-0 h-[6px] bg-primary-500 opacity-50 hover:opacity-70"></span>
+              </span>
+            </p>
+            <p>
+              I am an SWE at Grid Dynamics, where I work with Google Wifi team.
+              Before Grid, I used to work with Dassault Systèmes as a Research &
+              Development Engineer.
+            </p>
+            <p>
+              My passion lies in creating visually captivating interfaces,
+              building robust tools, and refining user interactions to ensure
+              they are both intuitive and delightful.
+            </p>
+            <p>
+              Interested in collaborating?{" "}
+              <span className="relative inline-block not-prose">
+                <Link href={"/contact"} className="font-semibold text-gray-200">
+                  Send me a message
+                </Link>
+                <span className="absolute bottom-1 inset-x-0 h-[6px] bg-primary-500 opacity-50 hover:opacity-70"></span>
+              </span>
             </p>
 
             {/* <ul className="text-sm !m-0">

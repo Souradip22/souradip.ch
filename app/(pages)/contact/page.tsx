@@ -5,6 +5,7 @@ import type { FC } from "react";
 import Link from "next/link";
 import { LinkWrapper } from "@/components/LinkWrapper";
 import { Card } from "@/components/Card";
+import SocialLinks from "@/components/SocialLinks";
 
 const title = "Contact";
 const description =
@@ -18,6 +19,7 @@ export const metadata: Metadata = {
 const Contact: FC = () => (
   <>
     <Header title={title} description={description} />
+    <SocialLinks />
     <Card title="" className=" !mt-[-60px]">
       <div className="p-[20px] md:p-[48px] not-prose">
         <h3>

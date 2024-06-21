@@ -29,7 +29,21 @@ import rehypeHighlight from "rehype-highlight";
 import "highlight.js/styles/github-dark.css";
 
 export const runtime = "nodejs";
+export const generateMetadata = async ({
+  params,
+}: PageProperties): Promise<Metadata> => {
+  const currentPath = params.slug;
+  const allSnippets = await getAllSnippetsMeta();
+  const snippet = allSnippets.find(({ slug }) => slug.current === currentPath);
 
+  if (!snippet) {
+    return {};
+  }
+
+  return {
+    title: snippet.title,
+  };
+};
 export const generateStaticParams = async (): Promise<
   PageProperties["params"][]
 > => {
