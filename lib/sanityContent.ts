@@ -1,8 +1,8 @@
 import { BlogPost, ISnippet } from "./interface/sanity";
+export const runtime = "nodejs";
 
 import groq from "groq";
 import matter from "gray-matter";
-import readTime from "reading-time";
 
 import sanityClient from "./sanityClient";
 
@@ -139,12 +139,7 @@ export async function getPostFromSlug(slug: string) {
   const post = await sanityClient.fetch(query);
 
   const source = post.content;
-  const { content } = matter(source);
-  // const readingTime = readTime(content);
-
   post["source"] = source;
-  // post["tableOfContents"] = tableOfContents;
-  // post["readingTime"] = readingTime;
 
   return post;
 }

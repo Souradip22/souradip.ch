@@ -1,8 +1,6 @@
 import { notFound } from "next/navigation";
 import remarkGfm from "remark-gfm";
-import Image from "next/image";
-import { ArrowLeftToLineIcon, SquareArrowLeft } from "lucide-react";
-import { LinkWrapper } from "@/components/LinkWrapper";
+import { SquareArrowLeft } from "lucide-react";
 import { Header } from "@/components/Header";
 import { siteUrl } from "@/lib/consts";
 import type { FC } from "react";
@@ -20,9 +18,9 @@ import { rehypeAccessibleEmojis } from "rehype-accessible-emojis";
 import type { Options as PrettyCodeOptions } from "rehype-pretty-code";
 import type { Options as RehypeAutoLinkHeadingsOptions } from "rehype-autolink-headings";
 import rehypeHighlight from "rehype-highlight";
+import readTime from "reading-time";
 
 import "highlight.js/styles/github-dark.css";
-import MetaData from "@/components/MetaData";
 
 export const runtime = "nodejs";
 
@@ -107,16 +105,10 @@ const Page: FC<PageProperties> = async ({ params }) => {
   if (!post) {
     return notFound();
   }
+  const readingTime = readTime(post.source);
 
   return (
     <>
-      {/* <MetaData
-        title={post.title}
-        suffix="Souradip Chandra"
-        description={post.excerpt}
-        previewImage={post.mainImage.asset.url}
-        keywords={post.keywords ?? ""}
-      /> */}
       <div className="flex items-center gap-2 text-neutral-500 dark:text-neutral-400 hover:text-orange-500 dark:hover:text-primary-400">
         <SquareArrowLeft className="w-4 h-4 text-inherit" />
         <Link
@@ -133,9 +125,28 @@ const Page: FC<PageProperties> = async ({ params }) => {
         {new Intl.DateTimeFormat("en-US", { dateStyle: "long" }).format(
           new Date(post.publishedAt)
         )}{" "}
-        {/* • {post.readingTime.text} */}
+        • {readingTime.text}
       </p>
-      {post.mainImage && post.mainImage.asset ? (
+      {post.categories ? (
+        <div className="flex items-center gap-2 !my-0">
+          <div>Tags:</div>
+          <div className="flex flex-wrap items-center gap-1 !my-2">
+            {post.categories.map(
+              (category: { title: string | null | undefined }, index: any) => {
+                return (
+                  <span
+                    key={`tag-${index}`}
+                    className="bg-stone-500/10 text-primary-500 rounded-md font-medium text-xs py-1 px-2 "
+                  >
+                    {category.title}
+                  </span>
+                );
+              }
+            )}
+          </div>
+        </div>
+      ) : null}
+      {/* {post.mainImage && post.mainImage.asset ? (
         <Image
           src={post.mainImage.asset.url}
           width={1920}
@@ -145,7 +156,7 @@ const Page: FC<PageProperties> = async ({ params }) => {
           priority
           quality={100}
         />
-      ) : undefined}
+      ) : undefined} */}
       <div>
         <MDXRemote
           source={post.source}

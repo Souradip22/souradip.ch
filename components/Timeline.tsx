@@ -76,7 +76,7 @@ const Timeline: FC = () => {
                 <p className="font-medium text-sm text-gray-900 dark:text-gray-100 !m-0 ">
                   {expObj?.title}
                   {expObj?.location && (
-                    <span className="text-sm">- {expObj?.location}</span>
+                    <span className="text-sm"> - {expObj?.location}</span>
                   )}
                 </p>
               </div>

@@ -78,8 +78,13 @@ const Home = async (): Promise<ReactElement> => {
       <main className="!my-2">
         <div>
           <div className="!m-0">
-            Hi 👋, I&apos;m Souradip!
-            <ul className="text-sm !m-0">
+            <p>Glad to have you in my little corner of the web! 🌟</p>
+            <p>
+              Check out my portfolio to see my projects, and don&apos;t hesitate
+              to reach out if you want to chat or collaborate!
+            </p>
+
+            {/* <ul className="text-sm !m-0">
               <li className=" !m-0">Software Engineer, based in India</li>
               <li className=" !m-0">
                 Working with{" "}
@@ -93,7 +98,7 @@ const Home = async (): Promise<ReactElement> => {
                 Love to travel <span className="text-xs"> 🌍 </span> and explore
                 food<span className="text-xs">🍲</span>{" "}
               </li>
-            </ul>
+            </ul> */}
           </div>
         </div>
         <hr className="my-4" />
@@ -212,7 +217,7 @@ const Home = async (): Promise<ReactElement> => {
           </div>
           <LeetcodeActivityGraph username="souradip22" />
         </div>
-        <div className="mt-5 mb-12 justify-center relative group">
+        <div className="my-12 justify-center relative group">
           <h2 className="text-xl font-medium text-black dark:text-white !m-0">
             Photo Gallery
           </h2>

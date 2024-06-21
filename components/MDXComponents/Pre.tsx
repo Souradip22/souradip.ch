@@ -36,7 +36,7 @@ const Pre = ({ children }: { children?: ReactNode }) => {
       <button
         aria-label="Copy code"
         type="button"
-        className={`!z-40 absolute right-[15px] top-[15px] h-8 w-8 rounded border-none p-1  border-gray-200/60  ${
+        className={`!z-40 absolute right-[15px] top-[5px] h-8 w-8 rounded border-none p-1  border-gray-200/60  ${
           copied ? "border-primary-500" : ""
         }`}
         onClick={onCopy}
@@ -73,7 +73,7 @@ const Pre = ({ children }: { children?: ReactNode }) => {
           )}
         </svg>
       </button>
-      <pre>{children}</pre>
+      <pre className="p-3 leading-5 text-xs ">{children}</pre>
     </div>
   );
 };
