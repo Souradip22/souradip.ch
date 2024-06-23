@@ -81,7 +81,7 @@ const Home = async (): Promise<ReactElement> => {
               </span>
             </p>
             <p>
-              I am an SWE at Grid Dynamics, where I work with Google Wifi team.
+              I am a SWE at Grid Dynamics, where I work with Google Wifi team.
               Before Grid, I used to work with Dassault Systèmes as a Research &
               Development Engineer.
             </p>
