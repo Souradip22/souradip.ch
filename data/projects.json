@@ -12,7 +12,7 @@
   {
     "title": "Portfolio Minute",
     "description": "This multitenant web app enables users to create stunning portfolio websites with custom subdomains for personalized experiences. It's been used by 50+ users, completely free and editable.",
-    "imageUrl": "/gifs/portfolio-min-1.gif",
+    "imageUrl": "/images/projects/portfolio-minute.png",
     "tags": ["NextJs", "Vercel", "NextAuth"],
     "demoLink": "https://portfoliominute.in",
     "repoLink": null,
