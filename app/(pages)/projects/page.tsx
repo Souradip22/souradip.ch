@@ -3,13 +3,13 @@ import projects from "@/data/projects.json";
 import Image from "next/image";
 import { Metadata } from "next";
 import { BlurImage } from "@/components/BlurImage";
-import { Header } from "@/components/Header";
 import { siteUrl } from "@/lib/consts";
 import { LinkWrapper } from "@/components/LinkWrapper";
+import { PageHeader } from "@/components/PageHeader";
 
-const title = "Side Projects";
+const title = "🧑🏻‍💻 Side Projects";
 const description =
-  "I've worked on a variety of projects, ranging from basic to complex. 🧑🏻‍💻";
+  "I've worked on a variety of projects, ranging from basic to complex. ";
 
 export const metadata: Metadata = {
   title,
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 const Project: FC = () => {
   return (
     <>
-      <Header title={title} description={description} />
+      <PageHeader title={title} description={description} />
       <div className="grid md:auto-rows-[24rem] grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
         {Object.values(projects).map((item, index) => {
           const rowIndex = Math.floor(index / 2);

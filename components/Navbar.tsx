@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import {
   BriefcaseBusinessIcon,
   HomeIcon,
+  Hourglass,
   LayersIcon,
   MessagesSquareIcon,
   NewspaperIcon,
@@ -20,6 +21,7 @@ const pages = [
   { name: "Blog", path: "/blog", icon: NotebookPenIcon },
   { name: "Snippets", path: "/snippets", icon: NewspaperIcon },
   { name: "Resources", path: "/resources", icon: LayersIcon },
+  { name: "Now", path: "/now", icon: Hourglass },
   { name: "Contact", path: "/contact", icon: MessagesSquareIcon },
 ];
 

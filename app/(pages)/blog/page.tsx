@@ -1,13 +1,13 @@
 import CommonListStyle from "@/components/CommonListStyle";
-import { Header } from "@/components/Header";
+import { PageHeader } from "@/components/PageHeader";
 import { getAllPostsMeta } from "@/lib/sanityContent";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import type { FC } from "react";
 export const revalidate = 60;
-const title = "Blog";
+const title = "✍🏻 Blog";
 const description =
-  "I've been programming for nearly 6 years, working with various technologies, and I'm here to share my journey. 💻";
+  "I've been programming for nearly 6 years, working with various technologies, and I'm here to share my journey.";
 
 export const metadata: Metadata = {
   title,
@@ -21,7 +21,7 @@ const Blog: FC = async () => {
   }
   return (
     <>
-      <Header title={title} description={description} />
+      <PageHeader title={title} description={description} />
       <div className="mt-8 grid ">
         {allBlogs.map((post) => (
           <CommonListStyle

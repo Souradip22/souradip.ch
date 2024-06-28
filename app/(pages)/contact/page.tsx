@@ -1,13 +1,12 @@
-import { Header } from "@/components/Header";
 import ContactForm from "@/components/ContactForm";
 import type { Metadata } from "next";
 import type { FC } from "react";
-import Link from "next/link";
 import { LinkWrapper } from "@/components/LinkWrapper";
 import { Card } from "@/components/Card";
 import SocialLinks from "@/components/SocialLinks";
+import { PageHeader } from "@/components/PageHeader";
 
-const title = "Contact";
+const title = "📳 Contact";
 const description =
   "Feel free to share your thoughts, and I'll get back to you as soon as possible! 💬";
 
@@ -18,7 +17,8 @@ export const metadata: Metadata = {
 
 const Contact: FC = () => (
   <>
-    <Header title={title} description={description} />
+    <PageHeader title={title} description={description} />
+    <br />
     <SocialLinks />
     <Card title="" className=" !mt-[-60px]">
       <div className="p-[20px] md:p-[48px] not-prose">

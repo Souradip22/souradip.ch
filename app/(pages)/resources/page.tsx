@@ -2,14 +2,14 @@ import Image from "next/image";
 import { LinkWrapper } from "@/components/LinkWrapper";
 import resources from "@/data/resources.json";
 import { Card } from "@/components/Card";
-import { Header } from "@/components/Header";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import type { FC } from "react";
+import { PageHeader } from "@/components/PageHeader";
 
-const title = "Resources";
+const title = "🔬 Resources";
 const description =
-  "Here are some helpful websites and tools that I've used for years and have greatly aided my application development.  🛠️";
+  "Here are some helpful websites and tools that I've used for years and have greatly aided my application development.";
 
 export const metadata: Metadata = {
   title,
@@ -77,7 +77,7 @@ const Tool: FC<{
 
 const Resource: FC = () => (
   <>
-    <Header title={title} description={description} />
+    <PageHeader title={title} description={description} />
     <div className="mt-8 grid gap-4 not-prose">
       {Object.values(resources).map(({ items, type }) => (
         <Card
