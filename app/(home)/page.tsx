@@ -294,7 +294,7 @@ const Home = async (): Promise<ReactElement> => {
         <div className="not-prose">
           {song?.isPlaying ? <WhenPlaying song={song} /> : <NotPlaying />}
         </div>
-        <div className="flex items-center gap-1 mt-5">
+        {/* <div className="flex items-center gap-1 mt-5">
           {visitors?.totalVisitors ? (
             <>
               <Dot className=" text-green-500 animate-pulse !m-0" />
@@ -303,7 +303,7 @@ const Home = async (): Promise<ReactElement> => {
               </span>
             </>
           ) : null}
-        </div>
+        </div> */}
       </footer>
     </PageLayout>
   );

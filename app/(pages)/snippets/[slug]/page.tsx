@@ -25,6 +25,7 @@ import { rehypeAccessibleEmojis } from "rehype-accessible-emojis";
 import type { Options as PrettyCodeOptions } from "rehype-pretty-code";
 import type { Options as RehypeAutoLinkHeadingsOptions } from "rehype-autolink-headings";
 import rehypeHighlight from "rehype-highlight";
+export const revalidate = 60;
 
 import "highlight.js/styles/github-dark.css";
 

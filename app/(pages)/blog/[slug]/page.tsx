@@ -19,6 +19,7 @@ import type { Options as PrettyCodeOptions } from "rehype-pretty-code";
 import type { Options as RehypeAutoLinkHeadingsOptions } from "rehype-autolink-headings";
 import rehypeHighlight from "rehype-highlight";
 import readTime from "reading-time";
+export const revalidate = 60;
 
 import "highlight.js/styles/github-dark.css";
 
