@@ -10,6 +10,7 @@ import { getAllPostsMeta, getPostFromSlug } from "@/lib/sanityContent";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import MDXComponents from "@/components/MDXComponents";
 import Link from "next/link";
+import Image from "next/image";
 
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeSlug from "rehype-slug";
@@ -147,7 +148,7 @@ const Page: FC<PageProperties> = async ({ params }) => {
           </div>
         </div>
       ) : null}
-      {/* {post.mainImage && post.mainImage.asset ? (
+      {post.mainImage && post.mainImage.asset ? (
         <Image
           src={post.mainImage.asset.url}
           width={1920}
@@ -157,8 +158,8 @@ const Page: FC<PageProperties> = async ({ params }) => {
           priority
           quality={100}
         />
-      ) : undefined} */}
-      <div>
+      ) : undefined}
+      <div className="text-justify">
         <MDXRemote
           source={post.source}
           //@ts-ignore
