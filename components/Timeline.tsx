@@ -66,7 +66,8 @@ const Timeline: FC = () => {
         <div key={`timeline-${index}`} className="not-prose my-4">
           <h3 className="font-bold text-primary-50 my-2">{year}</h3>
           {timelineElements(timeline.data[year])}
-          <p className="flex justify-center items-center"> - - - </p>
+          
+          {/* <p className="flex justify-center items-center my-0"> - - - </p> */}
         </div>
       ))}
 
