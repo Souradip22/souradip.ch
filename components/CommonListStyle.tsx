@@ -9,7 +9,7 @@ const CommonListStyle: FC<{
   readonly iconUrl?: string;
 }> = ({ title, date, link, iconUrl }) => (
   <Link
-    className="flex flex-col md:flex-row py-4 md:py-[8px] no-underline text-inherit group transition-colors border-dashed border-b border-gray-200 hover:border-primary-400 w-full dark:border-gray-700 dark:hover:border-primary-500 text-gray-800 dark:text-gray-400 sm:truncate text-sm"
+    className="flex flex-col md:flex-row py-4 md:py-[8px] no-underline text-inherit group transition-colors border-dashed border-b   w-full border-gray-700 hover:border-primary-500 text-gray-400 sm:truncate text-sm"
     key={link}
     href={link}
   >

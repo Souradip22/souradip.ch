@@ -32,8 +32,7 @@ const Tool: FC<{
       key={data.href}
       className={cn(
         "no-underline items-center flex gap-4 p-4 rounded-lg transition-colors",
-        "hover:bg-neutral-100",
-        "dark:hover:bg-neutral-800"
+        "hover:bg-neutral-800"
       )}
     >
       <Image
@@ -46,30 +45,21 @@ const Tool: FC<{
       />
       <div>
         <div className="flex items-center gap-2">
-          <p
-            className={cn(
-              "text-sm font-medium",
-              "text-neutral-900",
-              "dark:text-neutral-100"
-            )}
-          >
+          <p className={cn("text-sm font-medium", "text-neutral-100")}>
             {data.name}
           </p>
           {data.favourite ? (
             <span
               className={cn(
                 "text-xs px-2 rounded-full font-medium",
-                "bg-neutral-100 text-neutral-700",
-                "dark:bg-primary-700 dark:text-neutral-300"
+                "bg-primary-700 text-neutral-300"
               )}
             >
               Favourite
             </span>
           ) : undefined}
         </div>
-        <p className="text-sm text-neutral-500 dark:text-neutral-400">
-          {data.description}
-        </p>
+        <p className="text-sm text-neutral-400">{data.description}</p>
       </div>
     </LinkWrapper>
   );

@@ -46,11 +46,7 @@ const Pre = ({ children }: { children?: ReactNode }) => {
           viewBox="0 0 24 24"
           stroke="rgb(34, 197, 94)"
           fill="none"
-          className={
-            copied
-              ? "text-primary-500 "
-              : "text-darkSecondary dark:text-gray-200/60"
-          }
+          className={copied ? "text-primary-500 " : "text-gray-200/60"}
         >
           {copied ? (
             <>

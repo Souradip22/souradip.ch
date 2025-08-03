@@ -90,11 +90,11 @@ export default function ContactForm() {
           <input
             type="text"
             name="name"
-            className="block autofill:bg-transparent py-2.5 px-0 w-full text-sm text-gray-lite bg-transparent border-0 border-b-2 border-primary-400 appearance-none dark:text-white dark:border-gray-700 dark:focus:border-primary-400 focus:outline-none focus:ring-0 focus:border-primary-400 peer"
+            className="block autofill:bg-transparent py-2.5 px-0 w-full text-sm  bg-transparent border-0 border-b-2  appearance-none text-white border-gray-700 focus:border-primary-400 focus:outline-none focus:ring-0  peer"
             placeholder=" "
             required
           />
-          <label className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-200 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-primary-400 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8">
+          <label className="peer-focus:font-medium absolute text-sm text-gray-200 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-primary-400 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8">
             Name *
           </label>
         </div>
@@ -103,12 +103,12 @@ export default function ContactForm() {
           <input
             type="email"
             name="user_email"
-            className="block autofill:text-primary-900 py-2.5 px-0 w-full text-sm text-gray-lite bg-transparent border-0 border-b-2 border-primary-400 appearance-none dark:text-white dark:border-gray-700 dark:focus:border-primary-400 focus:outline-none focus:ring-0 focus:border-primary-400 peer"
+            className="block autofill:text-primary-900 py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b-2  appearance-none text-white border-gray-700 focus:border-primary-400 focus:outline-none focus:ring-0  peer"
             placeholder=" "
             id="user_email"
             required
           />
-          <label className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-200 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-primary-400 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8">
+          <label className="peer-focus:font-medium absolute text-sm text-gray-200 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-primary-400 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8">
             Email *
           </label>
         </div>
@@ -117,12 +117,12 @@ export default function ContactForm() {
           <input
             type="text"
             name="message"
-            className="block autofill:bg-primary-500 py-2.5 px-0 w-full text-sm text-gray-lite bg-transparent border-0 border-b-2 border-primary-400 appearance-none dark:text-white dark:border-gray-700 dark:focus:border-primary-400 focus:outline-none focus:ring-0 focus:border-primary-400 peer"
+            className="block autofill:bg-primary-500 py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b-2  appearance-none text-white border-gray-700 focus:border-primary-400 focus:outline-none focus:ring-0 peer"
             placeholder=" "
             id="message"
             required
           />
-          <label className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-200 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-primary-400 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8">
+          <label className="peer-focus:font-medium absolute text-sm text-gray-200 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-primary-400 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8">
             Message *
           </label>
         </div>

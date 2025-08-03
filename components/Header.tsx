@@ -16,7 +16,7 @@ export const Header: FC<HeaderProperties> = ({
   <header className="space-y-2">
     {showImage && (
       <div className=" relative flex-shrink-1 pb-4 md:order-last order-first ">
-        <div className="group rounded-lg w-20 relative  transition-all ease-out duration-300 shadow-[0_0_3px_rgb(132,204,22),_0_0_10px_rgb(77,124,15)] hover:shadow-[0_0_5px_rgb(34,197,92),_0_0_20px_rgb(21,128,61)] text-gray-400 dark:text-gray-200">
+        <div className="group rounded-lg w-20 relative  transition-all ease-out duration-300 shadow-[0_0_3px_rgb(132,204,22),_0_0_10px_rgb(77,124,15)] hover:shadow-[0_0_5px_rgb(34,197,92),_0_0_20px_rgb(21,128,61)] text-gray-200">
           <div
             style={{ top: "30px", opacity: 0.2, width: "50%", left: "-30px" }}
             className="absolute h-[2px] bg-primary-400"

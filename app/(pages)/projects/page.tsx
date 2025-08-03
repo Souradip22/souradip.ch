@@ -45,7 +45,7 @@ const Project: FC = () => {
           return (
             <LinkWrapper
               key={item.title}
-              className={`row-span-1 rounded-xl group hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 dark:bg-black dark:border-white/[0.2] bg-white justify-between flex flex-col space-y-4  border border-gray-200 border-solid cursor-pointer !no-underline ${colSpanClass}`}
+              className={`row-span-1 rounded-xl group hover:shadow-xl transition duration-200 shadow-none p-4 bg-black border-white/[0.2] justify-between flex flex-col space-y-4  border  !no-underline ${colSpanClass}`}
               href={item.demoLink}
             >
               <div className="relative rounded-md w-full h-64 ">
@@ -68,10 +68,10 @@ const Project: FC = () => {
                     );
                   })}
                 </div>
-                <div className="font-sans font-bold text-neutral-600 dark:text-neutral-200 mb-2 mt-2">
+                <div className="font-sans font-bold text-neutral-200 mb-2 mt-2">
                   {item.title}
                 </div>
-                <div className="font-sans font-normal text-neutral-600 text-xs dark:text-neutral-300">
+                <div className="font-sans font-normal  text-xs text-neutral-300">
                   {item.description}
                 </div>
               </div>

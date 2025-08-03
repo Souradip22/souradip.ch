@@ -100,7 +100,7 @@ const Page: FC<PageProperties> = async ({ params }) => {
 
   return (
     <>
-      <div className="flex items-center gap-2 text-neutral-500 dark:text-neutral-400 hover:text-orange-500 dark:hover:text-primary-400">
+      <div className="flex items-center gap-2 text-neutral-400 hover:text-primary-400">
         <SquareArrowLeft className="w-4 h-4 text-inherit" />
         <Link
           className="text-inherit text-sm no-underline hover:text-inherit"

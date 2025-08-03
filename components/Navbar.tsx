@@ -34,8 +34,7 @@ export const Navbar: FC = () => {
     <nav
       className={cn(
         "rounded-full flex items-center fixed top-6 left-1/2 -translate-x-1/2 backdrop-blur-sm backdrop-filter bg-opacity-50 shadow-lg  border-[2px] text-sm",
-        "bg-white/80 border-neutral-800",
-        "dark:bg-neutral-950/80 dark:border-neutral-800"
+        "bg-neutral-950/80 border-neutral-800"
       )}
     >
       {pages.map((link) => (
@@ -47,7 +46,7 @@ export const Navbar: FC = () => {
             "relative py-1 sm:py-2 px-3 sm:px-5",
             isActive(link.path)
               ? "font-medium text-primary-500 border-[2px] border-neutral-800  rounded-full m-1 "
-              : "text-neutral-500 dark:text-neutral-400"
+              : "text-neutral-400"
           )}
         >
           <span className="block sm:hidden">

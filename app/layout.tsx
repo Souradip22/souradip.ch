@@ -78,7 +78,7 @@ const RootLayout: FC<RootLayoutProperties> = ({ children }) => (
       className={cn(
         GeistSans.variable,
         GeistMono.variable,
-        "bg-white dark:bg-neutral-900 font-sans"
+        "bg-neutral-900 font-sans"
       )}
     >
       {/* {process.env.NODE_ENV === "production" && (

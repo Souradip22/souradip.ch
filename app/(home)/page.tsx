@@ -119,14 +119,12 @@ const Home = async (): Promise<ReactElement> => {
         </div>
         <hr className="my-4" />
         <div>
-          <h2 className="text-xl font-medium text-black dark:text-white !m-0">
-            Side Projects
-          </h2>
+          <h2 className="text-xl font-medium text-white !m-0">Side Projects</h2>
           <div className="my-4 grid grid-cols-2 md:grid-cols-3 gap-4">
             {projects?.slice(0, 3).map((project, index) => (
               <div
                 key={`sub-proj-${index}`}
-                className="min-w-[120px] flex-col px-4 py-2 border border-gray-200 dark:border-gray-700/70 rounded-lg hover:bg-gray-100 dark:bg-stone-800/70 dark:hover:bg-stone-800 dark:hover:border-gray-700 dark:shadow-[0_0_8px_rgba(0,0,0,0.8)] shadow-[0_0_8px_rgba(0,0,0,0.06)] flex relative !no-underline"
+                className="min-w-[120px] flex-col px-4 py-2 border border-gray-700/70 rounded-lg bg-stone-800/70 hover:bg-stone-800 hover:border-gray-700 shadow-[0_0_8px_rgba(0,0,0,0.8)]  flex relative !no-underline"
               >
                 <Link
                   href={project?.demoLink}
@@ -149,7 +147,7 @@ const Home = async (): Promise<ReactElement> => {
                       />
                     ) : (
                       <>
-                        <div className="flex items-center justify-center w-[42px] h-[42px] text-lg font-medium text-white bg-black border border-gray-100 rounded-full dark:border-gray-800 drop-shadow-xl">
+                        <div className="flex items-center justify-center w-[42px] h-[42px] text-lg font-medium text-white bg-black border rounded-full border-gray-800 drop-shadow-xl">
                           {project?.title?.slice(0, 1)}
                         </div>
                       </>
@@ -199,18 +197,16 @@ const Home = async (): Promise<ReactElement> => {
         <hr className="my-4" />
       </main>
       <footer className="!m-0 not-prose">
-        <h2 className="text-xl font-medium text-black dark:text-white !m-0">
-          Recent Activity
-        </h2>
+        <h2 className="text-xl font-medium text-white !m-0">Recent Activity</h2>
 
         <div className="my-8">
           <div className="flex items-center gap-3 pb-3">
-            <h3 className="font-medium text-black dark:text-white !m-0">
+            <h3 className="font-medium text-white !m-0">
               Github Contributions
             </h3>
             <LinkWrapper
               href={githubLink as string}
-              className="relative flex items-center gap-1 justify-center px-2 py-[3px] rounded-lg group text-xs text-gray-900 shadow-sm border border-gray-300 min-h-[28px] dark:border-gray-700 dark:text-gray-200  bg-white dark:bg-neutral-900 duration-100 hover:text-primary-400 "
+              className="relative flex items-center gap-1 justify-center px-2 py-[3px] rounded-lg group text-xs shadow-sm border min-h-[28px] border-gray-700 text-gray-200  bg-neutral-900 duration-100 hover:text-primary-400 "
             >
               View Github profile
               <ExternalLink className="h-3 mb-[1px] w-3" />
@@ -220,12 +216,12 @@ const Home = async (): Promise<ReactElement> => {
         </div>
         <div className="my-8">
           <div className="flex items-center gap-3 pb-3">
-            <h3 className="font-medium text-black dark:text-white !m-0">
+            <h3 className="font-medium text-white !m-0">
               Leetcode Submissions
             </h3>
             <LinkWrapper
               href={leetcodeLink as string}
-              className="relative flex items-center gap-1 justify-center px-2 py-[3px] rounded-lg group text-xs text-gray-900 shadow-sm border border-gray-300 min-h-[28px] dark:border-gray-700 dark:text-gray-200  bg-white dark:bg-neutral-900 duration-100 hover:text-primary-400 "
+              className="relative flex items-center gap-1 justify-center px-2 py-[3px] rounded-lg group text-xs  shadow-sm border min-h-[28px] border-gray-700 text-gray-200  bg-neutral-900 duration-100 hover:text-primary-400 "
             >
               View Leetcode profile
               <ExternalLink className="h-3 w-3 mb-[1px]" />
@@ -234,9 +230,7 @@ const Home = async (): Promise<ReactElement> => {
           <LeetcodeActivityGraph username="souradip22" />
         </div>
         <div className="my-12 justify-center relative group">
-          <h2 className="text-xl font-medium text-black dark:text-white !m-0">
-            Photo Gallery
-          </h2>
+          <h2 className="text-xl font-medium text-white !m-0">Photo Gallery</h2>
           <h4 className="text-sm mb-4">
             A glimpse into my world through these snapshots! 📸
           </h4>
@@ -245,7 +239,7 @@ const Home = async (): Promise<ReactElement> => {
               <div
                 key={item.src}
                 className={cn(
-                  "relative bg-gray-100  hover:bg-stone-900 duration-100 ease-in-out rounded-[12px] dark:border-stone-700  md:hover:scale-[1.05]"
+                  "relative bg-gray-100  hover:bg-stone-900 duration-100 ease-in-out rounded-[12px] border-stone-700  md:hover:scale-[1.05]"
                 )}
               >
                 <Image
@@ -270,7 +264,7 @@ const Home = async (): Promise<ReactElement> => {
               <div
                 key={item.src}
                 className={cn(
-                  "relative bg-gray-100  hover:bg-stone-900 duration-100 ease-in-out rounded-[12px] dark:border-stone-700  md:hover:scale-[1.05]"
+                  "relative bg-gray-100  hover:bg-stone-900 duration-100 ease-in-out rounded-[12px] border-stone-700  md:hover:scale-[1.05]"
                 )}
               >
                 <Image
@@ -338,7 +332,7 @@ async function fetchVisitorsCount(): Promise<any | null> {
 
 function NotPlaying() {
   return (
-    <div className="flex w-full md:w-1/2 flex-row-reverse items-center border-[2px] border-neutral-800 justify-between p-3 rounded-lg dark:bg-neutral-950 sm:p-4 mt-4">
+    <div className="flex w-full md:w-1/2 flex-row-reverse items-center border-[2px] border-neutral-800 justify-between p-3 rounded-lg bg-neutral-950 sm:p-4 mt-4">
       <Image
         src="/spotify.svg"
         alt="spotify"
@@ -347,9 +341,7 @@ function NotPlaying() {
         height={24}
       />
       <div className="flex flex-col sm:flex-row sm:items-center sm:gap-3">
-        <div className="font-semibold text-sm text-black  dark:text-white">
-          Not Playing
-        </div>
+        <div className="font-semibold text-sm text-white">Not Playing</div>
         <span className="hidden md:inline-flex">—</span>
         <p className="text-xs text-gray-500 sm:text-sm">Spotify</p>
       </div>
@@ -360,10 +352,10 @@ function NotPlaying() {
 function WhenPlaying({ song }: { song: SongData }) {
   return (
     <div className="flex flex-col gap-4 ">
-      <h4 className="text-sm font-semibold dark:text-gray-300">Now Playing</h4>
+      <h4 className="text-sm font-semibold text-gray-300">Now Playing</h4>
       <Link
         href={song.songUrl}
-        className="flex items-center  w-full md:w-1/2 border-[2px] border-neutral-800 justify-between p-3 rounded-lg dark:bg-neutral-950 sm:p-4"
+        className="flex items-center  w-full md:w-1/2 border-[2px] border-neutral-800 justify-between p-3 rounded-lg bg-neutral-950 sm:p-4"
       >
         <div className="flex items-center gap-2 ">
           <div className="w-10 h-10">
@@ -378,12 +370,10 @@ function WhenPlaying({ song }: { song: SongData }) {
             />
           </div>
           <div className="flex flex-col ">
-            <h3 className="font-semibold text-black md:text-lg dark:text-white animate-">
+            <h3 className="font-semibold md:text-lg text-white animate-">
               {song.title}
             </h3>
-            <p className="text-xs text-gray-600 dark:text-gray-400 sm:text-sm">
-              {song.artist}
-            </p>
+            <p className="text-xs text-gray-400 sm:text-sm">{song.artist}</p>
           </div>
         </div>
         <div className="flex items-center gap-2">

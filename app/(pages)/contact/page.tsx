@@ -23,7 +23,7 @@ const Contact: FC = () => (
     <Card title="" className=" !mt-[-60px]">
       <div className="p-[20px] md:p-[48px] not-prose">
         <h3>
-          <span className="dark:text-gray-400 ">
+          <span className="text-gray-400 ">
             Want to hire me as a freelancer? Lets discuss.
           </span>
           <br />
@@ -39,7 +39,7 @@ const Contact: FC = () => (
           </LinkWrapper>
         </div>
         <span className="flex flex-row justify-center">- Or -</span>
-        <h3 className="mt-4 text-gray-600 dark:text-gray-400">
+        <h3 className="mt-4 text-gray-400">
           Drop in your details and I will get back to you.
         </h3>
         <ContactForm />

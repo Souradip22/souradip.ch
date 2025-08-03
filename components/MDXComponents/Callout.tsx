@@ -4,28 +4,23 @@ import { Info, CircleX, Lightbulb, CircleCheck, BookOpen } from "lucide-react";
 
 const themes: CalloutTypes = {
   info: {
-    classes:
-      "bg-blue-100 text-blue-800 dark:text-blue-300 dark:bg-blue-200 dark:bg-opacity-20",
+    classes: "text-blue-300 bg-blue-200 bg-opacity-20",
     icon: <Info className="w-5 h-5 " />,
   },
   idea: {
-    classes:
-      "bg-gray-100 text-gray-800 dark:text-gray-300 dark:bg-gray-200 dark:bg-opacity-20",
+    classes: "text-gray-300 bg-gray-200 bg-opacity-20",
     icon: <Lightbulb className="w-5 h-5 " />,
   },
   error: {
-    classes:
-      "bg-red-200 text-red-900 dark:text-red-200 dark:bg-red-600 dark:bg-opacity-30",
+    classes: "text-red-200 bg-red-600 bg-opacity-30",
     icon: <CircleX className="w-5 h-5 " />,
   },
   default: {
-    classes:
-      "bg-orange-100 text-orange-800 dark:text-orange-300 dark:bg-orange-200 dark:bg-opacity-20",
+    classes: "text-orange-300 bg-orange-200 bg-opacity-20",
     icon: <BookOpen className="w-5 h-5 " />,
   },
   green: {
-    classes:
-      "bg-green-100 text-green-800 dark:text-green-300 dark:bg-green-200 dark:bg-opacity-20",
+    classes: "text-green-300 bg-green-200 bg-opacity-20",
     icon: <CircleCheck className="w-5 h-5 " />,
   },
 };
