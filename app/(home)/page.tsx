@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "I'm a  Software Engineer from India, now based in Bangalore. I bring 6 years' expertise to crafting seamless software solutions.",
+    "Senior Software Engineer leads the development of software components, mentors junior developers, and actively contributes to code reviews and system architecture",
 };
 
 const getUrlByTitle = (title: string) => {
@@ -81,7 +81,7 @@ const Home = async (): Promise<ReactElement> => {
               </span>
             </p>
             <p>
-              I am a SWE at Grid Dynamics, where I work with Google Wifi team.
+              I am a SSE at Grid Dynamics, where I work with VISA on Cybersource product.
               Before Grid, I used to work with Dassault Systèmes as a Research &
               Development Engineer.
             </p>
